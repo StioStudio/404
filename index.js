@@ -3,6 +3,7 @@ import * as fs from 'fs';
 
 http.createServer(function (request, response) {
     console.log(request.url)
+    response.statusCode = 404
     switch (request.url) {
         case "/404/404.js":
             fs.readFile("./404.js", function (error, content) {
